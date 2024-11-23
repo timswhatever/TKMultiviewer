@@ -1,0 +1,43 @@
+<HTML>
+
+<head>
+<title>Multiviewer</title>
+<link rel="stylesheet" href="/css/index.css">
+</head>
+
+<header>
+    <div class="headertop">
+        <h1>Multiviewer</h1>
+    </div>
+</header>
+
+<body>
+
+<div class="urlbox">
+
+    <input type="text" id="url1" name="Channel1" autocomplete="off" onchange="submitOne()"/>
+
+</div>
+
+    <div id="twitch-embed"></div>
+
+    <script src="/js/v1.js"></script>
+
+    <div class="players">
+        <div class="playerOne">
+            <iframe src="https://player.twitch.tv/?channel=omie&parent=www.example.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+         </div>
+            
+         <div class="playerTwo">
+            <script src="/js/playerTwo.js"></script>
+        </div>
+        <div class="playerThree">
+            <script src="/js/playerThree.js"></script>
+        </div>
+            
+        <div class="playerFour">
+            <script src="/js/playerFour.js"></script>
+        </div>
+     </div>
+</body>
+</HTML>
