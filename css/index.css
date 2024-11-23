@@ -55,7 +55,7 @@ label {
 
 .players iframe {
     height: 480; 
-    min-width: 840;
+    width: 854;
     resize: both;
     overflow: hidden;
     position: relative;
@@ -63,7 +63,7 @@ label {
 }
 
 .players .playerOne {
-    margin-left: 55px;
+    margin-left: 80px;
 }
 
 .players .playerTwo {
@@ -72,7 +72,7 @@ label {
 
 .players .playerThree {
     position: relative;
-    padding-left: 55px;
+    padding-left: 80px;
 }
 
 .players .playerFour {
