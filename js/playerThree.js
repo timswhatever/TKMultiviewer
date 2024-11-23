@@ -1,7 +1,7 @@
-new Twitch.Embed("twitch-embed", {
-    width: 854,
-    height: 480,
-    channel: "stableronaldo",
-    autoplay: true,
-    layout: "video",
-    });
+document.getElementById('url3').addEventListener("url3", submitOne);
+
+function submitOne() {
+    let channelThree = document.getElementById('url3').value
+    var combined = "https://player.twitch.tv/?channel=" + channelThree + "&parent=timswhatever.github.io"
+    document.getElementById('channel3').setAttribute("src", combined)
+}

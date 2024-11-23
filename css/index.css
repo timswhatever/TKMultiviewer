@@ -29,38 +29,32 @@ body {
 background: #242526;
 }
 
+label {
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 
 .players {
-    min-width: 250px;
-    position: relative;
-    display: flex;
     outline: auto;
     outline-width: thick;
+    align-content: center;
     justify-content: center;
-    align-items: center;
-    margin-right: 50px;
+    display: grid;  
 }
 
-.players .playerOne script {
+.players .playerOne {
     display: inline-block;
-    position: absolute;
-
 }
 
-.players .playerTwo script {
+.players .playerTwo {
     display: inline-block;
-    position: absolute;
-
 }
 
-.players .playerThree script {
+.players .playerThree {
     display: inline-block;
-    position: absolute;
-
 }
 
-.players .playerFour script {
+.players .playerFour {
     display: inline-block;
-    position: absolute;
-
 }

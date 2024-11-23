@@ -15,7 +15,20 @@
 
 <div class="urlbox">
     <script src="/js/playerOne.js"></script>
+    <label for="url1">1</label>
     <input type="text" id="url1" name="Channel1Submit" autocomplete="off" onchange="submitOne()"/>
+
+    <script src="/js/playerTwo.js"></script>
+    <label for="url2">2</label>
+    <input type="text" id="url2" name="Channel2Submit" autocomplete="off" onchange="submitTwo()"/>
+
+    <script src="/js/playerThree.js"></script>
+    <label for="url3">3</label>
+    <input type="text" id="url3" name="Channel3Submit" autocomplete="off" onchange="submitThree()"/>
+
+    <script src="/js/playerFour.js"></script>
+    <label for="url4">4</label>
+    <input type="text" id="url4" name="Channel4Submit" autocomplete="off" onchange="submitFour()"/>
 
 </div>
 
@@ -25,18 +38,25 @@
 
     <div class="players">
         <div class="playerOne">
+            <label>1</label>
             <iframe id="channel1" src="https://player.twitch.tv/?channel=?&parent=timswhatever.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="480" width="854"></iframe>
-         </div>
-            
-         <div class="playerTwo">
-            <script src="/js/playerTwo.js"></script>
         </div>
+
+        <div class="playerTwo">
+            <label>2</label>
+            <iframe id="channel2" src="https://player.twitch.tv/?channel=?&parent=timswhatever.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="480" width="854"></iframe>
+        </div>
+
+            <br>
+
         <div class="playerThree">
-            <script src="/js/playerThree.js"></script>
-        </div>
-            
+            <label>3</label>
+            <iframe id="channel3" src="https://player.twitch.tv/?channel=?&parent=timswhatever.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="480" width="854"></iframe>
+        </div>  
+
         <div class="playerFour">
-            <script src="/js/playerFour.js"></script>
+            <label>4</label>
+            <iframe id="channel4" src="https://player.twitch.tv/?channel=?&parent=timswhatever.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="480" width="854"></iframe>
         </div>
      </div>
 </body>
