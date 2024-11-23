@@ -1,11 +1,13 @@
 .headertop {
+    height: 8%;
     display: flex;
     outline: auto;
-    outline-color: black;
+    outline-color: white;
     outline-width: thick;
+    outline-style: solid;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .urlbox {
@@ -14,7 +16,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white
 }
 
@@ -27,34 +29,52 @@ h1 {
 
 body {
 background: #242526;
+justify-content: center;
+align-items: center;
 }
 
 label {
     color: white;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
 .players {
-    outline: auto;
-    outline-width: thick;
     align-content: center;
     justify-content: center;
-    display: grid;  
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    overflow: hidden;
+    position: relative;
+}
+
+.players iframe {
+    height: 480; 
+    min-width: 840;
+    resize: both;
+    overflow: hidden;
+    position: relative;
+    display: block;
 }
 
 .players .playerOne {
-    display: inline-block;
+    margin-left: 55px;
 }
 
 .players .playerTwo {
-    display: inline-block;
+    position: relative;
 }
 
 .players .playerThree {
-    display: inline-block;
+    position: relative;
+    padding-left: 55px;
 }
 
 .players .playerFour {
-    display: inline-block;
+    position: relative;
 }
