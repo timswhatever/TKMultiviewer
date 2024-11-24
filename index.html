@@ -3,6 +3,7 @@
 <head>
     <title>Multiviewer</title>
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/slider.css">
 </head>
 
 <header>
@@ -14,19 +15,36 @@
 <body>
 
 <div class="urlbox">
+
     <script src="/js/playerOne.js"></script>
-    <label for="url1">1</label>
-    <input type="text" id="url1" name="Channel1Submit" autocomplete="off" onchange="submitOne()"/>
+    <label class="switch">
+        <input class="checkbox1" type="checkbox">
+        <span class="slider round"></span>
+      </label>
+        <label for="url1">1</label>
+        <input type="text" id="url1" name="Channel1Submit" autocomplete="off" onchange="submitOne()"/>
 
     <script src="/js/playerTwo.js"></script>
+    <label class="switch">
+        <input class="checkbox1" type="checkbox">
+        <span class="slider round"></span>
+      </label>
     <label for="url2">2</label>
     <input type="text" id="url2" name="Channel2Submit" autocomplete="off" onchange="submitTwo()"/>
 
     <script src="/js/playerThree.js"></script>
+    <label class="switch">
+        <input class="checkbox1" type="checkbox">
+        <span class="slider round"></span>
+      </label>
     <label for="url3">3</label>
     <input type="text" id="url3" name="Channel3Submit" autocomplete="off" onchange="submitThree()"/>
 
     <script src="/js/playerFour.js"></script>
+    <label class="switch">
+        <input class="checkbox1" type="checkbox">
+        <span class="slider round"></span>
+      </label>
     <label for="url4">4</label>
     <input type="text" id="url4" name="Channel4Submit" autocomplete="off" onchange="submitFour()"/>
 
