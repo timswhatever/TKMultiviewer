@@ -1,5 +1,5 @@
-# tMultiViewer
-View up to 4 twitch streams at once.
+# MultiViewer
+View up to 4 twitch and kick streams at once.
 
 Very WIP
 Not sure why I made this but figured it would be fun
