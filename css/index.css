@@ -15,9 +15,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
     color: white
+}
+
+.urlbox label {
+    margin-left: 30px;
+    position: relative;
+}
+
+.urlbox .switch {
+    margin-left: 45%;
+    margin-bottom: 5%;
+    position: relative;
 }
 
 h1 {
