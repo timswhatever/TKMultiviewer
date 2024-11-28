@@ -62,21 +62,17 @@ label {
 
 
 .players {
-    align-content: center;
-    justify-content: center;
     display: grid; 
     grid-template-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     padding-top: 1%;
     padding-bottom: 2%;
     overflow: hidden;
-    position: relative;
 }
 
 .players iframe {
     min-height: 400; 
     min-width: 340;
-    resize: both;
     overflow: hidden;
     position: relative;
     display: block;
@@ -91,18 +87,17 @@ label {
 }
 
 .players .playerTwo {
-    position: relative;
     padding-left: 1px;
+    padding-right: 77px;
 }
 
 .players .playerThree {
-    position: relative;
     padding-left: 80px;
     padding-top: 30px;
 }
 
 .players .playerFour {
-    position: relative;
     padding-top: 30px;
     padding-left: 1px;
+    padding-right: 77px;
 }
