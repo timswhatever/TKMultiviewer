@@ -4,10 +4,6 @@ https://timswhatever.github.io
 View up to 4 twitch and kick streams at once.
 Simply enter a channel name in the text box, flip a switch to either twitch or kick (color coded) and enjoy.
 
-Very WIP
-
-Not sure why I made this but figured it would be fun
-
 Still working on CSS
 
 
