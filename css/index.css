@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     color: #e4e6eb;
     outline: auto;
     outline-offset: 20px;
@@ -43,7 +43,7 @@
 }
 
 h1 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 40px;
     color: white;
 }
@@ -57,7 +57,7 @@ align-items: center;
 
 label {
     color: white;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 
@@ -80,6 +80,7 @@ label {
     align-items: center;
     width: 93%;
     height: 100%;
+    margin: auto;
 }
 
 .players .playerOne {
