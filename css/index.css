@@ -61,44 +61,21 @@ label {
 }
 
 
-.players {
+#players {
     display: grid; 
     grid-template-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    padding-top: 1%;
+    padding-top: 3%;
     padding-bottom: 2%;
     overflow: hidden;
+    gap: 15px;
 }
 
-.players iframe {
-    min-height: 400; 
+#players iframe {
+    min-height: 480; 
     min-width: 340;
     overflow: hidden;
     position: relative;
     display: block;
-    justify-content: center;
-    align-items: center;
-    width: 93%;
-    height: 100%;
     margin: auto;
-}
-
-.players .playerOne {
-    margin-left: 80px;
-}
-
-.players .playerTwo {
-    padding-left: 1px;
-    padding-right: 77px;
-}
-
-.players .playerThree {
-    padding-left: 80px;
-    padding-top: 30px;
-}
-
-.players .playerFour {
-    padding-top: 30px;
-    padding-left: 1px;
-    padding-right: 77px;
 }
