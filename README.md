@@ -1,5 +1,5 @@
 # TKMultiviewer
-https://timswhatever.github.io
+https://tkmultiviewer.pages.dev
 
 View (almost) unlimited streams for both Twitch and Kick, at the same time.
 
