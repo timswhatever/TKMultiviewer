@@ -1,0 +1,48 @@
+:root {
+    --global-bg-color: #020202;
+    --global-font-family: "Helvetica Neue","Arial";
+    --global-text-color: rgb(238, 238, 238);
+    --global-header-bg-color:rgb(49, 49, 49);
+    --global-border-color: rgb(238, 238, 238); 
+    --global-shadow-color: rgba(236, 236, 236, 0.15);
+    --global-card-bg-color: var(--global-header-bg-color);
+}
+
+/* 1px 1px 25px 1px  */
+
+body,
+html {
+  background-color: var(--global-bg-color);
+  margin: 0;
+  padding: 0;
+  font-family: var(--global-font-family);
+  transition: background-color 0.3s ease;
+}
+
+p,
+h1 {
+  color: var(--global-text-color);
+  margin: 0;
+  font-family: var(--global-font-family);
+  transition: color 0.3s ease;
+}
+
+button {
+  margin: 0;
+  font-family: var(--global-font-family);
+  cursor: pointer;
+}
+
+input {
+  font-family: var(--global-font-family);
+}
+
+.header {
+  transition: background-color 0.3s ease;
+}
+
+/* old body background-color: #121212; */
+
+/* #020202; */
+
+/* another color i like #8d8d8d; */

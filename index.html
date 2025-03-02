@@ -1,97 +1,72 @@
-<HTML>
-
-<head>
+<!DOCTYPE html>
+<html>
+  <head>
     <title>Multiviewer</title>
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/slider.css">
-</head>
+    <link rel="stylesheet" href="styling/index.css">
+    <link rel="stylesheet" href="styling/general.css">
+    <link rel="stylesheet" href="styling/grid.css">
+    <link rel="stylesheet" href="styling/toggle.css">
+    <link rel="stylesheet" href="styling/themes.css">
 
-<header>
-    <div class="headertop">
-        <h1>Multiviewer</h1>
+    <script src="js/players.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/mobile-prevention.js"></script>
+    <script src="js/themes.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="author" href="https://github.com/timswhatever" />
+    <meta name="description" content="A multi-viewer for twitch and kick live streaming platforms that allows you to view (almost) unlimited streams.">
+    <meta name="keywords" content="multiviewer, twitch, kick, multi, viewer, twitch multiviewer, kick multiviewer">
+  </head>
+
+  <body>
+
+    <!-- Sorry mobile users :( -->
+    <div class="mobile-block" style="visibility:hidden;">
+      <div class="bubble">
+        <h1>Hey!</h1>
+        <p>It appears you are trying to access this website on mobile.</p>
+        <p>I have disabled mobile support because it would probably set your phone on fire, need to fix mobile viewing anyways.</p>
+        <p>However if you are viewing this on an iPad or similar and your seeing this message, let me know on <a href="https://github.com/timswhatever">Github</a></p>
+        <a class="github-button" href="https://github.com/timswhatever/timswhatever.github.io/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue timswhatever/timswhatever.github.io on GitHub">Issue</a>
+      </div>
     </div>
-</header>
 
-<body>
+    <div class="header">
+      <button class="info" hidden>
+        <img src="assets/info.svg">
+      </button>
+      <h1>TKMultiviewer</h1>
+      <select class="themes">
+        <option value="dark-mode">Dark Mode (Default)</option>
+        <option value="light-mode">Light mode</option>
+        <option value="grey">Grey</option>
+        <option value="purple-dark">Purple (Dark)</option>
+        <option value="purple-light">Purple (Light)</option>
+        <option value="green-dark">Green (Dark)</option>
+        <option value="green-light">Green (Light)</option>
+        <option value="gamer-mode">Gamer Mode</option>
+      </select>
+    </div>
 
-<div class="urlbox">
-<br>
+    <div class="button-wrapper">
+      <button class="plus-button js-plus-button" onclick="addPlayer()" tabindex="0">+</button>
+    </div>
 
-    <div>
-        <label class="switch">
-            <input id="checkbox1" type="checkbox" onchange="submitOne()">
-            <span class="slider round"></span>
-        </label>
+    <div class="embed-grid">
+    </div>
+
+    <div class="chat-box" style="visibility:hidden;">
+    </div>
+
+    <div class="button-wrapper">
+      <button class="plus-button js-plus-button bottom-plus-button" onclick="addPlayer()">+</button>
+    </div>
+
     <br>
-        <label for="url1">1</label>
-        <input type="text" id="url1" name="Channel1Submit" autocomplete="off" onchange="submitOne()"/>
-    </div>
-<br>
-    <div>
-        <label class="switch">
-            <input id="checkbox2" type="checkbox" onchange="submitTwo()">
-            <span class="slider round"></span>
-        </label>
-    <br>
-        <label for="url2">2</label>
-        <input type="text" id="url2" name="Channel2Submit" autocomplete="off" onchange="submitTwo()"/>
-    </div>
-<br>
-    <div>
-        <label class="switch">
-            <input id="checkbox3" type="checkbox" onchange="submitThree()">
-            <span class="slider round"></span>
-        </label>
-    <br>
-        <label for="url3">3</label>
-        <input type="text" id="url3" name="Channel3Submit" autocomplete="off" onchange="submitThree()"/>
-    </div>
-<br>
-    <div>
-        <label class="switch">
-            <input id="checkbox4" type="checkbox" onchange="submitFour()">
-            <span class="slider round"></span>
-        </label>
-    <br>
-        <label for="url4">4</label>
-        <input type="text" id="url4" name="Channel4Submit" autocomplete="off" onchange="submitFour()"/>
-    </div>
-<br>
+    <a class="github-button" href="https://github.com/timswhatever/timswhatever.github.io" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" aria-label="Star timswhatever/timswhatever.github.io on GitHub">Star</a>
 
-</div>
-
-    <div id="twitch-embed"></div>
-
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
-
-    <div id="players">
-
-        <script src="/js/players.js"></script>
-
-        <div id="p1">
-            <label>1</label>
-            <iframe id="channel1" src="https://player.twitch.tv/?channel=?&parent=timswhatever.github.io" width='100%' height='480' frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
-        </div>
-
-        <div id="p2">
-            <label>2</label>
-            <iframe id="channel2" src="https://player.twitch.tv/?channel=?&parent=timswhatever.github.io" width='100%' height='480' frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
-        </div>
-
-        <div id="p3">
-            <label>3</label>
-            <iframe id="channel3" src="https://player.twitch.tv/?channel=?&parent=timswhatever.github.io" width='100%' height='480' frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
-        </div>  
-
-        <div id="p4">
-            <label>4</label>
-            <iframe id="channel4" src="https://player.twitch.tv/?channel=?&parent=timswhatever.github.io" width='100%' height='480' frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
-        </div>
-     </div>
-
-<a class="github-button" href="https://github.com/timswhatever/timswhatever.github.io" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" aria-label="Star timswhatever/timswhatever.github.io on GitHub">Star</a>
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-
-
-</body>
-</HTML>
+  </body>
+</html>

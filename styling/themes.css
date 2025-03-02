@@ -1,0 +1,93 @@
+[data-theme='light-mode'] {
+    --global-bg-color: #ffffff;
+    --global-font-family: "Helvetica Neue","Arial";
+    --global-text-color: rgb(0, 0, 0);
+    --global-header-bg-color:rgb(230, 230, 230);
+    --global-border-color: rgb(230, 230, 230);
+    --global-shadow-color: rgba(70, 70, 70, 0.15);
+    --global-card-bg-color: rgb(230, 230, 230);
+}
+
+[data-theme='grey'] {
+    --global-bg-color: #8d8d8d;
+    --global-font-family: "Helvetica Neue","Arial";
+    --global-text-color: rgb(0, 0, 0);
+    --global-header-bg-color:rgb(231, 231, 231);
+    --global-border-color: rgb(230, 230, 230);
+    --global-shadow-color: rgba(255, 255, 255, 0.25);
+}
+
+[data-theme='purple-dark'] {
+    --global-bg-color: #020202;
+    --global-font-family: "Helvetica Neue","Arial";
+    --global-text-color: rgb(163, 51, 255);
+    --global-header-bg-color:rgb(49, 49, 49);
+    --global-border-color: rgb(163, 51, 255);
+    --global-shadow-color: rgba(163, 51, 255, 0.25);
+}
+
+[data-theme='purple-light'] {
+    --global-bg-color: #ffffff;
+    --global-font-family: "Helvetica Neue","Arial";
+    --global-text-color: rgb(163, 51, 255);
+    --global-header-bg-color:rgb(230, 230, 230);
+    --global-border-color: rgb(163, 51, 255);
+    --global-shadow-color: rgba(163, 51, 255, 0.25);
+}
+
+[data-theme='green-dark'] {
+    --global-bg-color: #020202;
+    --global-font-family: "Helvetica Neue","Arial";
+    --global-text-color: rgb(83, 252, 24);
+    --global-header-bg-color:rgb(49, 49, 49);
+    --global-border-color: rgb(83, 252, 24);
+    --global-shadow-color: rgba(83, 252, 24, 0.25);
+}
+
+[data-theme='green-light'] {
+    --global-bg-color: #ffffff;
+    --global-font-family: "Helvetica Neue","Arial";
+    --global-text-color: rgb(83, 252, 24);
+    --global-header-bg-color:rgb(230, 230, 230);
+    --global-border-color: rgb(83, 252, 24);
+    --global-shadow-color: rgba(83, 252, 24, 0.25);
+}
+
+[data-theme='gamer-mode'] .video-player {
+    animation-name: rainbow-shadow;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+@keyframes rainbow-shadow {
+    0% {
+        --global-shadow-color: red;
+    }
+    12.5% {
+        --global-shadow-color: orange;
+    }
+    25% {
+        --global-shadow-color: yellow;
+    }
+    37.5% {
+        --global-shadow-color: green;
+    }
+    50% {
+        --global-shadow-color: blue;
+    }
+    62.5% {
+        --global-shadow-color: indigo;
+    }
+    75% { 
+        --global-shadow-color: violet;
+    }
+    87.5% {
+        --global-shadow-color: rgb(250, 0, 175);
+    }
+    100% {
+        --global-shadow-color: red;
+    }
+}
+

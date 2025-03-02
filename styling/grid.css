@@ -1,0 +1,80 @@
+.embed-grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:center;
+  align-content:center;
+  align-items:center;
+  column-gap: 15px;
+  row-gap: 8px;
+  overflow: hidden;
+  align-items: stretch;
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out, border-color 0.3s ease, box-shadow 0.3s ease;
+  -webkit-transition: opacity 0.15s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  -moz-transition: opacity 0.15s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  -o-transition: opacity 0.15s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.embed-grid.active {
+  opacity: 1;
+}
+
+.url-input {
+  padding-top: 11px;
+  padding-bottom: 15px;
+  padding-right: 150px;
+  border-style: solid;
+  border-radius: 3px;
+  border-color: rgb(37, 37, 37);
+  background-color: rgb(37, 37, 37);
+  color: white;
+  font-size: 15px;
+  vertical-align: middle;
+  margin-bottom: 8px;
+  margin-right: 5px;
+}
+
+.minus-button {
+  width: 45px;
+  height: 45px;
+  background-color: rgb(255, 94, 94);
+  border-style: none;
+  border-radius: 5px;
+  font-size: 18px;
+  vertical-align: middle;
+  margin-right: 15px;
+  margin-bottom: 8px;
+}
+
+.bottom-plus-button {
+  transition: opacity 0.15s ease-in-out;
+  -webkit-transition: opacity 0.15s ease-in-out;
+  -moz-transition: opacity 0.15s ease-in-out;
+  -o-transition: opacity 0.15s ease-in-out;
+  opacity: 0;
+}
+
+.bottom-plus-button.active {
+  opacity: 1;
+}
+
+
+.video-player {
+  margin-bottom: 60px;
+  border-style: solid; 
+  border-radius: 25px;
+  border-color: var(--global-border-color);
+  margin: 15px;
+  padding: 25px;
+  box-shadow: 1px 1px 25px 1px var(--global-shadow-color);
+  background-color: var(--global-card-bg-color);
+  transition: background-color 0.3s ease
+}
+
+.video-player iframe {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+}
