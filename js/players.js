@@ -95,7 +95,7 @@ function channelChangeToggle(event, i) {
       if(siteCheckbox.checked) {
         iframeSource.setAttribute("src", "https://player.kick.com/" + channelInput.value)
       } else {
-        iframeSource.setAttribute("src", "https://player.twitch.tv/?channel=" + channelInput.value + "&parent=timswhatever.github.io")
+        iframeSource.setAttribute("src", "https://player.twitch.tv/?channel=" + channelInput.value + "&parent=tkmultiviewer.pages.dev")
       }
 }
 
