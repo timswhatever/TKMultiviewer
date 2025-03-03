@@ -9,6 +9,7 @@ To-do:
 - [ ] Chat box
 - [ ] Improve themes
 - [ ] Better name
+- [ ] Improve kick embeds
 - [x] More than 4 streams
 
 
