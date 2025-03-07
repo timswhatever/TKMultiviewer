@@ -37,7 +37,7 @@ function changeChatBox(i) {
     if(channelName == undefined || channelName == null || channelName == '') {
     } else {
       for(i=0; i < videoArray.length; i++) {
-        document.querySelector('.chat-iframe').setAttribute('src', `https://www.twitch.tv/popout/${channelNameBtn.innerHTML}/chat`)
+        document.querySelector('.chat-iframe').setAttribute('src', `https://www.twitch.tv/embed/${channelNameBtn.innerHTML}/chat?darkpopout&parent=tkmultiviewer.pages.dev`)
         channelNameBtn.style.borderColor = "rgb(163, 51, 255)"
       }
     }
