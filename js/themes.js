@@ -19,9 +19,17 @@ function changeTheme() {
 
     const selectedTheme = themeMenu.value
 
+    const settingsImg = document.querySelector('.settings-img')
+
     const elements = document.querySelectorAll('body, html, h1, p, .button-wrapper, .embed-grid, .url-input, .header')
 
     for(i=0; i < elements.length; i++) {
         elements[i].setAttribute("data-theme", selectedTheme)
+    }
+
+    if (selectedTheme == 'light-mode' || selectedTheme == 'purple-light' || selectedTheme == 'green-light') {
+      settingsImg.setAttribute('src', 'assets/settingslightmode.svg')
+    } else if(selectedTheme == 'dark-mode' || selectedTheme == 'purple-dark' || selectedTheme == 'green-dark' || selectedTheme == 'gamer-mode') {
+      settingsImg.setAttribute('src', 'assets/settingsdarkmode.svg')
     }
 }

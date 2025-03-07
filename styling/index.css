@@ -2,8 +2,6 @@
   border-style: none;
   border-radius: 100vmax;
   display: flex;
-  vertical-align: middle;
-  justify-content: space-between;
   padding: 25px;
   margin: 15px;
   background-color: var(--global-header-bg-color);
@@ -13,14 +11,18 @@
   flex-wrap: wrap;
 }
 
-.input {
+.button-wrapper,
+.header,
+.plus-button,
+.mobile-block,
+.settings-menu,
+span {
   display: flex;
   justify-content: center;
-}
-
-.button-wrapper {
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  vertical-align: middle;
 }
 
 .plus-button {
@@ -30,25 +32,18 @@
   border-style: none;
   border-radius: 5px;
   font-size: 18px;
-  vertical-align: middle;
-}
-
-span {
-  margin-left: 8px;
 }
 
 .mobile-block {
   margin: 0;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   display: flex;
   background-color: rgba(0,0,0,0.8);
-  vertical-align: middle;
-  align-items: center;
-  justify-content: center;
   z-index: 1;
   backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
 
 .bubble {
@@ -77,4 +72,52 @@ span {
   border-style: solid;
   border-radius: 12px;
   padding: 10px;
+  margin-bottom: 10px;
+}
+
+.settings-button {
+  background-color: transparent;
+  border-style: none;
+}
+
+.settings-menu {
+  display: none;
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 1;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.settings-close {
+  height: 35px;
+  width: 35px;
+  border-style: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.settings-menu.active {
+  display: flex;
+}
+
+.bubble {
+  display: flex;
+  flex-direction: row;
+}
+
+.bubble h1 {
+  margin-right: 15px;
+}
+
+.bubble-below p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+span {
+  margin-top: 10px;
 }

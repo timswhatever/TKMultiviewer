@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="styling/grid.css">
     <link rel="stylesheet" href="styling/toggle.css">
     <link rel="stylesheet" href="styling/themes.css">
+    <link rel="stylesheet" href="styling/chat.css">
+    <link rel="stylesheet" href="styling/opacity.css">
 
     <script src="js/players.js"></script>
     <script src="js/chat.js"></script>
     <script src="js/mobile-prevention.js"></script>
     <script src="js/themes.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/settings.js"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,21 +38,33 @@
       </div>
     </div>
 
+    <div class="settings-menu">
+      <div class="bubble">
+          <h1>TKMultiviewer</h1>
+          <button class="settings-close">x</button>
+        <div class="bubble-below">
+          <select class="themes">
+            <option value="dark-mode">Dark Mode (Default)</option>
+            <option value="light-mode">Light mode</option>
+            <option value="grey">Grey</option>
+            <option value="purple-dark">Purple (Dark)</option>
+            <option value="purple-light">Purple (Light)</option>
+            <option value="green-dark">Green (Dark)</option>
+            <option value="green-light">Green (Light)</option>
+            <option value="gamer-mode">Gamer Mode</option>
+          </select>
+          <p>Chat Opacity</p>
+          <input type="range" min="10" max="100" value="50" class="opacity-slider" oninput="chatOpacity()">
+          <a class="github-button" href="https://github.com/timswhatever/timswhatever.github.io" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" aria-label="Star timswhatever/timswhatever.github.io on GitHub">Star</a>
+        </div>
+      </div>
+    </div>
+
     <div class="header">
-      <button class="info" hidden>
-        <img src="assets/info.svg">
+      <button class="settings-button">
+        <img class="settings-img" src="assets/settingsdarkmode.svg">
       </button>
-      <h1>TKMultiviewer</h1>
-      <select class="themes">
-        <option value="dark-mode">Dark Mode (Default)</option>
-        <option value="light-mode">Light mode</option>
-        <option value="grey">Grey</option>
-        <option value="purple-dark">Purple (Dark)</option>
-        <option value="purple-light">Purple (Light)</option>
-        <option value="green-dark">Green (Dark)</option>
-        <option value="green-light">Green (Light)</option>
-        <option value="gamer-mode">Gamer Mode</option>
-      </select>
+      <h1 class="header-title">TKMultiviewer</h1>
     </div>
 
     <div class="button-wrapper">
@@ -58,15 +74,19 @@
     <div class="embed-grid">
     </div>
 
-    <div class="chat-box" style="visibility:hidden;">
-    </div>
-
     <div class="button-wrapper">
       <button class="plus-button js-plus-button bottom-plus-button" onclick="addPlayer()">+</button>
     </div>
 
-    <br>
-    <a class="github-button" href="https://github.com/timswhatever/timswhatever.github.io" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" aria-label="Star timswhatever/timswhatever.github.io on GitHub">Star</a>
+    <button class="open-close-chat" onclick="openCloseChat()">&lt</button>
+
+    <div class="chat-box" style="display: none;">
+      <div class="chat-tabs">
+      </div>
+      <div class="chat-window">
+        <iframe class="chat-iframe" src="" frame-order="0" style="display: none;"></iframe>
+      </div>
+    </div>
 
   </body>
 </html>

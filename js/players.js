@@ -7,20 +7,13 @@ let videoArray = []
 // Adds a new div to the grid with a class based on index number
 function addToGrid() {
 
-  let videoPlayerHTML = '';
-
   for(i=0; i < videoArray.length; i++) {
-
-    const videoObject = videoArray[i];
-    const { indexNumber } = videoObject;
-
   }
-
   document.querySelector('.embed-grid').insertAdjacentHTML('beforeend', 
     `
     <div class="video-player player-${i}">
-      <button class="minus-button js-minus-button" onclick="removePlayer(${i})">-</button>
-      <input type="text" class="url-input js-url-input-${i}" maxlength="25" placeholder="Channel Name" onkeydown="channelChange(event, ${i})">
+      <button class="minus-button js-minus-button" onclick="removePlayer(${i}); removeChatTab(${i})">-</button>
+      <input type="text" class="url-input js-url-input-${i}" maxlength="25" minlength="3" placeholder="Channel Name" onkeydown="channelChange(event, ${i})">
       <label class="switch">
         <input class="js-site-checkbox-${i}" type="checkbox" onchange="channelChangeToggle(event, ${i})" tabindex="0">
         <span class="slider round"></span>
@@ -29,6 +22,8 @@ function addToGrid() {
     </div>
     `
   )
+
+  addChatTab(i)
 }
 
 // Pushes new index to array then executes addtogrid with a limit of 6 embeds
@@ -54,13 +49,13 @@ function removePlayer(i) {
   const playerNumber = document.querySelector(`.player-${i}`)
 
   for(i = videoArray.length; i >=0; --i) {
-      videoArray.splice(i, 1)
-      showElements()
-        if (playerNumber.parentNode == null) {
-          return
-        } else {
-            playerNumber.parentNode.removeChild(playerNumber)
-        }
+    videoArray.splice(i, 1)
+    showElements()
+    if (playerNumber.parentNode == null) {
+      return
+    } else {
+      playerNumber.parentNode.removeChild(playerNumber)
+    }
   }
 }
 
@@ -73,13 +68,17 @@ function channelChange (event, i) {
 
   const siteCheckbox = document.querySelector(`.js-site-checkbox-${i}`)
     
-    if(event.key === "Enter") {
-      if(siteCheckbox.checked) {
-        iframeSource.setAttribute("src", "https://player.kick.com/" + channelInput.value)
-      } else {
-        iframeSource.setAttribute("src", "https://player.twitch.tv/?channel=" + channelInput.value + "&parent=tkmultiviewer.pages.dev")
-      }
+  if(event.key === "Enter") {
+    if(siteCheckbox.checked) {
+      // make sure to change both values for both functions
+      iframeSource.setAttribute("src", "https://player.kick.com/" + channelInput.value)
+      console.log(document.querySelector('.injected-video-player'))
+      updateUsername(i)
+    } else {
+      iframeSource.setAttribute("src", "https://player.twitch.tv/?channel=" + channelInput.value + "&parent=tkmultiviewer.pages.dev")
+      updateUsername(i)
     }
+  }
 }
 
 
@@ -91,13 +90,15 @@ function channelChangeToggle(event, i) {
   const iframeSource = document.querySelector(`.iframe-${i}`)
 
   const siteCheckbox = document.querySelector(`.js-site-checkbox-${i}`)
-  
-      if(siteCheckbox.checked) {
-        iframeSource.setAttribute("src", "https://player.kick.com/" + channelInput.value)
-      } else {
-        iframeSource.setAttribute("src", "https://player.twitch.tv/?channel=" + channelInput.value + "&parent=timswhatever.github.io")
-      }
-}
+  if(siteCheckbox.checked) {
+    // make sure to change both values for both functions
+    iframeSource.setAttribute("src", "https://player.kick.com/" + channelInput.value)
+    updateUsername(i)
+  } else {
+    iframeSource.setAttribute("src", "https://player.twitch.tv/?channel=" + channelInput.value + "&parent=tkmultiviewer.pages.dev")
+    updateUsername(i)
+  }
+ }
 
 
 // makes the embed grid and + button on the button visible which is helpful when you got lotta embeds

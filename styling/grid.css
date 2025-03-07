@@ -13,8 +13,8 @@
   -webkit-transition: opacity 0.15s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   -moz-transition: opacity 0.15s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   -o-transition: opacity 0.15s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-  padding-top: 35px;
-  padding-bottom: 35px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .embed-grid.active {
