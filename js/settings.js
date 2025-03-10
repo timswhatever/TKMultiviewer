@@ -21,6 +21,4 @@ function chatOpacity() {
   const chatBox = document.querySelector('.chat-box')
 
   chatBox.style.opacity = chatOpacitySlider.value / 100
-
-  console.log(chatOpacitySlider.value)
 } 

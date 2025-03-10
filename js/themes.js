@@ -27,9 +27,9 @@ function changeTheme() {
         elements[i].setAttribute("data-theme", selectedTheme)
     }
 
-    if (selectedTheme == 'light-mode' || selectedTheme == 'purple-light' || selectedTheme == 'green-light') {
+    if (selectedTheme == 'light-mode' || selectedTheme == 'purple-light' || selectedTheme == 'green-light' || selectedTheme == 'grey') {
       settingsImg.setAttribute('src', 'assets/settingslightmode.svg')
-    } else if(selectedTheme == 'dark-mode' || selectedTheme == 'purple-dark' || selectedTheme == 'green-dark' || selectedTheme == 'gamer-mode') {
+    } else {
       settingsImg.setAttribute('src', 'assets/settingsdarkmode.svg')
     }
 }

@@ -1,6 +1,7 @@
 .header {
   border-style: none;
   border-radius: 100vmax;
+  justify-content: space-between;
   display: flex;
   padding: 25px;
   margin: 15px;
@@ -12,7 +13,7 @@
 }
 
 .button-wrapper,
-.header,
+.header button,
 .plus-button,
 .mobile-block,
 .settings-menu,
@@ -67,12 +68,13 @@ span {
 
 .themes {
   color: white;
-  background-color: #020202;
-  border-color: black;
+  background-color: var(--global-bg-color);
+  border-color: var(--global-bg-color);
   border-style: solid;
   border-radius: 12px;
   padding: 10px;
   margin-bottom: 10px;
+  color: var(--global-text-color)
 }
 
 .settings-button {
@@ -105,6 +107,7 @@ span {
 }
 
 .bubble {
+  background-color: var(--global-header-bg-color);
   display: flex;
   flex-direction: row;
 }
