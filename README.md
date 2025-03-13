@@ -4,6 +4,7 @@ https://tkmultiviewer.pages.dev
 View (almost) unlimited streams for both Twitch and Kick, at the same time.
 
 Small project I occasionally update, still learning JS and CSS. Definitely not the best it could be.
+If you want to see 7tv, betterTTV, and frankerfaceZ emotes in chat, I recommend installing betterTTV and enabling emotes from all of those platforms.
 
 To-do:
 - [x] Chat box
