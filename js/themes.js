@@ -4,6 +4,14 @@ window.addEventListener('load', function(){
 
   const addButton = this.document.querySelector('.plus-button')
 
+  let selectedTheme = themeMenu.value
+
+  if(this.localStorage.getItem('theme') == null || this.localStorage.getItem('theme') == undefined) {
+  } else {
+    themeMenu.value =  JSON.parse(this.localStorage.getItem('theme'))
+    changeTheme()
+  }
+
   themeMenu.addEventListener('change', function(){
     changeTheme()
   })
@@ -32,4 +40,6 @@ function changeTheme() {
     } else {
       settingsImg.setAttribute('src', 'assets/settingsdarkmode.svg')
     }
+
+    window.localStorage.setItem('theme', JSON.stringify(selectedTheme))
 }

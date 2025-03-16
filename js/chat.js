@@ -57,7 +57,6 @@ function updateUsername(i) {
     document.querySelector('.chat-iframe').style.display = 'flex';
     document.querySelector(`.username-tab-${i}`).style.display = 'flex';
   }
-
   // Fires function to set iframe src
   changeChatBox(i)
 }
@@ -66,7 +65,6 @@ function updateUsername(i) {
 function removeChatTab(i) {
     const channelNameBtn = document.querySelector(`.username-tab-${i}`)
     channelNameBtn.parentElement.removeChild(channelNameBtn)
-
 }
 
 function openCloseChat() {
